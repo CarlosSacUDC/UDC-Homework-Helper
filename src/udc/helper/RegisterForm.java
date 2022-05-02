@@ -308,7 +308,7 @@ public class RegisterForm extends javax.swing.JFrame {
         jPanel1.add(passLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 580, 340, 30));
 
         passLabel4.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        passLabel4.setForeground(new java.awt.Color(73, 80, 87));
+        passLabel4.setForeground(new java.awt.Color(0, 153, 204));
         passLabel4.setText("Terms of Service ");
         passLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
