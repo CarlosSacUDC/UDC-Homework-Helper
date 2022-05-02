@@ -34,45 +34,45 @@ public class RegisterForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        overlay1 = new udc.helper.Overlay();
+        myOverlay = new udc.helper.Overlay();
         exit = new javax.swing.JPanel();
         xButton = new javax.swing.JLabel();
         bar = new javax.swing.JPanel();
         min = new javax.swing.JPanel();
         minButton = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        userLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        userLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        userLabel4 = new javax.swing.JLabel();
-        userLabel5 = new javax.swing.JLabel();
-        passLabel1 = new javax.swing.JLabel();
-        jPasswordField2 = new javax.swing.JPasswordField();
-        passLabel2 = new javax.swing.JLabel();
+        appNameLeft = new javax.swing.JLabel();
+        appNameRight = new javax.swing.JLabel();
+        signUpPanel = new javax.swing.JPanel();
+        passField = new javax.swing.JPasswordField();
+        schoolLabel = new javax.swing.JLabel();
+        signUpButton = new javax.swing.JButton();
+        firstLabel = new javax.swing.JLabel();
+        nameField = new javax.swing.JTextField();
+        iconBanner = new javax.swing.JLabel();
+        banner = new javax.swing.JLabel();
+        lastNameField = new javax.swing.JTextField();
+        schoolField = new javax.swing.JTextField();
+        emailField = new javax.swing.JTextField();
+        lastNameLabel = new javax.swing.JLabel();
+        emailLabel = new javax.swing.JLabel();
         passLabel = new javax.swing.JLabel();
-        passLabel3 = new javax.swing.JLabel();
-        passLabel4 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        rePassField = new javax.swing.JPasswordField();
+        rePassLabel = new javax.swing.JLabel();
+        textTerms2 = new javax.swing.JLabel();
+        textTerms1 = new javax.swing.JLabel();
+        textTerms3 = new javax.swing.JLabel();
+        logoLeft = new javax.swing.JLabel();
+        logoRight = new javax.swing.JLabel();
+        eclipseLeft = new javax.swing.JLabel();
+        eclipseRight = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
 
-        overlay1.setMaximumSize(new java.awt.Dimension(920, 520));
-        overlay1.setMinimumSize(new java.awt.Dimension(920, 520));
-        overlay1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        myOverlay.setMaximumSize(new java.awt.Dimension(920, 520));
+        myOverlay.setMinimumSize(new java.awt.Dimension(920, 520));
+        myOverlay.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         exit.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -104,7 +104,7 @@ public class RegisterForm extends javax.swing.JFrame {
             .addComponent(xButton, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        overlay1.add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 0, 40, 40));
+        myOverlay.add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 0, 40, 40));
 
         bar.setBackground(new java.awt.Color(255, 255, 255));
         bar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -148,17 +148,17 @@ public class RegisterForm extends javax.swing.JFrame {
             .addComponent(minButton, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(145, 234, 228));
-        jLabel4.setText("Homework");
-        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        appNameLeft.setBackground(new java.awt.Color(255, 255, 255));
+        appNameLeft.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        appNameLeft.setForeground(new java.awt.Color(145, 234, 228));
+        appNameLeft.setText("Homework");
+        appNameLeft.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(122, 137, 254));
-        jLabel5.setText("Helper");
-        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        appNameRight.setBackground(new java.awt.Color(255, 255, 255));
+        appNameRight.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        appNameRight.setForeground(new java.awt.Color(122, 137, 254));
+        appNameRight.setText("Helper");
+        appNameRight.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout barLayout = new javax.swing.GroupLayout(bar);
         bar.setLayout(barLayout);
@@ -166,9 +166,9 @@ public class RegisterForm extends javax.swing.JFrame {
             barLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, barLayout.createSequentialGroup()
                 .addGap(358, 358, 358)
-                .addComponent(jLabel4)
+                .addComponent(appNameLeft)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
+                .addComponent(appNameRight)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 323, Short.MAX_VALUE)
                 .addComponent(min, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -180,173 +180,173 @@ public class RegisterForm extends javax.swing.JFrame {
             .addGroup(barLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(barLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5))
+                    .addComponent(appNameLeft)
+                    .addComponent(appNameRight))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        overlay1.add(bar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 40));
+        myOverlay.add(bar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 40));
 
-        jPanel1.setBackground(new java.awt.Color(240,248,255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        signUpPanel.setBackground(new java.awt.Color(240,248,255));
+        signUpPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        signUpPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPasswordField1.setBackground(new java.awt.Color(73, 80, 87));
-        jPasswordField1.setForeground(new java.awt.Color(255, 255, 255));
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        passField.setBackground(new java.awt.Color(73, 80, 87));
+        passField.setForeground(new java.awt.Color(255, 255, 255));
+        passField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                passFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, 360, 30));
+        signUpPanel.add(passField, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, 360, 30));
 
-        userLabel2.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        userLabel2.setForeground(new java.awt.Color(73, 80, 87));
-        userLabel2.setText("School");
-        jPanel1.add(userLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 100, 50));
+        schoolLabel.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        schoolLabel.setForeground(new java.awt.Color(73, 80, 87));
+        schoolLabel.setText("School");
+        signUpPanel.add(schoolLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 100, 50));
 
-        jButton1.setBackground(new java.awt.Color(85, 110, 230));
-        jButton1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Sign Up");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        signUpButton.setBackground(new java.awt.Color(85, 110, 230));
+        signUpButton.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        signUpButton.setForeground(new java.awt.Color(255, 255, 255));
+        signUpButton.setText("Sign Up");
+        signUpButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton1MouseEntered(evt);
+                signUpButtonMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton1MouseExited(evt);
+                signUpButtonMouseExited(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        signUpButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                signUpButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 550, 360, 30));
+        signUpPanel.add(signUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 550, 360, 30));
 
-        userLabel3.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        userLabel3.setForeground(new java.awt.Color(73, 80, 87));
-        userLabel3.setText("First Name");
-        jPanel1.add(userLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 100, 50));
+        firstLabel.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        firstLabel.setForeground(new java.awt.Color(73, 80, 87));
+        firstLabel.setText("First Name");
+        signUpPanel.add(firstLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 100, 50));
 
-        jTextField3.setForeground(new java.awt.Color(73, 80, 87));
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        nameField.setForeground(new java.awt.Color(73, 80, 87));
+        nameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                nameFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 360, 30));
+        signUpPanel.add(nameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 360, 30));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/udc/helper/icons/regIcon.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 70, 90));
+        iconBanner.setIcon(new javax.swing.ImageIcon(getClass().getResource("/udc/helper/icons/regIcon.png"))); // NOI18N
+        signUpPanel.add(iconBanner, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 70, 90));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/udc/helper/icons/New_Card_Header.png"))); // NOI18N
-        jLabel3.setText("header");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 1, 400, -1));
+        banner.setIcon(new javax.swing.ImageIcon(getClass().getResource("/udc/helper/icons/New_Card_Header.png"))); // NOI18N
+        banner.setText("header");
+        signUpPanel.add(banner, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 1, 400, -1));
 
-        jTextField4.setForeground(new java.awt.Color(73, 80, 87));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        lastNameField.setForeground(new java.awt.Color(73, 80, 87));
+        lastNameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                lastNameFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 360, 30));
+        signUpPanel.add(lastNameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 360, 30));
 
-        jTextField5.setForeground(new java.awt.Color(73, 80, 87));
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        schoolField.setForeground(new java.awt.Color(73, 80, 87));
+        schoolField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                schoolFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 360, 30));
+        signUpPanel.add(schoolField, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 360, 30));
 
-        jTextField6.setForeground(new java.awt.Color(73, 80, 87));
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        emailField.setForeground(new java.awt.Color(73, 80, 87));
+        emailField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                emailFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 360, 30));
+        signUpPanel.add(emailField, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 360, 30));
 
-        userLabel4.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        userLabel4.setForeground(new java.awt.Color(73, 80, 87));
-        userLabel4.setText("Last Name");
-        jPanel1.add(userLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 100, 50));
+        lastNameLabel.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        lastNameLabel.setForeground(new java.awt.Color(73, 80, 87));
+        lastNameLabel.setText("Last Name");
+        signUpPanel.add(lastNameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 100, 50));
 
-        userLabel5.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        userLabel5.setForeground(new java.awt.Color(73, 80, 87));
-        userLabel5.setText("E-mail");
-        jPanel1.add(userLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 100, 50));
+        emailLabel.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        emailLabel.setForeground(new java.awt.Color(73, 80, 87));
+        emailLabel.setText("E-mail");
+        signUpPanel.add(emailLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 100, 50));
 
-        passLabel1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        passLabel1.setForeground(new java.awt.Color(73, 80, 87));
-        passLabel1.setText("Password");
-        jPanel1.add(passLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 100, 50));
-
-        jPasswordField2.setBackground(new java.awt.Color(73, 80, 87));
-        jPasswordField2.setForeground(new java.awt.Color(255, 255, 255));
-        jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 360, 30));
-
-        passLabel2.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        passLabel2.setForeground(new java.awt.Color(73, 80, 87));
-        passLabel2.setText("Confirm Password");
-        jPanel1.add(passLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 120, 50));
-
-        passLabel.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        passLabel.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         passLabel.setForeground(new java.awt.Color(73, 80, 87));
-        passLabel.setText("acknowledge the ");
-        jPanel1.add(passLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 600, 110, 30));
+        passLabel.setText("Password");
+        signUpPanel.add(passLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 100, 50));
 
-        passLabel3.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        passLabel3.setForeground(new java.awt.Color(73, 80, 87));
-        passLabel3.setText("By clicking Sign Up, you are indicating that you have read and ");
-        jPanel1.add(passLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 580, 340, 30));
-
-        passLabel4.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        passLabel4.setForeground(new java.awt.Color(0, 153, 204));
-        passLabel4.setText("Terms of Service ");
-        passLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                passLabel4MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                passLabel4MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                passLabel4MouseExited(evt);
+        rePassField.setBackground(new java.awt.Color(73, 80, 87));
+        rePassField.setForeground(new java.awt.Color(255, 255, 255));
+        rePassField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rePassFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(passLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(195, 600, 100, 30));
+        signUpPanel.add(rePassField, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 360, 30));
 
-        overlay1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 400, 640));
+        rePassLabel.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        rePassLabel.setForeground(new java.awt.Color(73, 80, 87));
+        rePassLabel.setText("Confirm Password");
+        signUpPanel.add(rePassLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 120, 50));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/udc/helper/icons/HH_icon_small.png"))); // NOI18N
-        overlay1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, -1, -1));
+        textTerms2.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        textTerms2.setForeground(new java.awt.Color(73, 80, 87));
+        textTerms2.setText("acknowledge the ");
+        signUpPanel.add(textTerms2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 600, 110, 30));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/udc/helper/icons/HH_icon_small.png"))); // NOI18N
-        overlay1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 530, -1, -1));
+        textTerms1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        textTerms1.setForeground(new java.awt.Color(73, 80, 87));
+        textTerms1.setText("By clicking Sign Up, you are indicating that you have read and ");
+        signUpPanel.add(textTerms1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 580, 340, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/udc/helper/icons/EllipseRegLeft.png"))); // NOI18N
-        overlay1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 20, 290, -1));
+        textTerms3.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        textTerms3.setForeground(new java.awt.Color(0, 153, 204));
+        textTerms3.setText("Terms of Service ");
+        textTerms3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                textTerms3MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                textTerms3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                textTerms3MouseExited(evt);
+            }
+        });
+        signUpPanel.add(textTerms3, new org.netbeans.lib.awtextra.AbsoluteConstraints(195, 600, 100, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/udc/helper/icons/EllipseRegRight.png"))); // NOI18N
-        overlay1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 420, 270, -1));
+        myOverlay.add(signUpPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 400, 640));
+
+        logoLeft.setIcon(new javax.swing.ImageIcon(getClass().getResource("/udc/helper/icons/HH_icon_small.png"))); // NOI18N
+        myOverlay.add(logoLeft, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, -1, -1));
+
+        logoRight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/udc/helper/icons/HH_icon_small.png"))); // NOI18N
+        myOverlay.add(logoRight, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 530, -1, -1));
+
+        eclipseLeft.setIcon(new javax.swing.ImageIcon(getClass().getResource("/udc/helper/icons/EllipseRegLeft.png"))); // NOI18N
+        myOverlay.add(eclipseLeft, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 20, 290, -1));
+
+        eclipseRight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/udc/helper/icons/EllipseRegRight.png"))); // NOI18N
+        myOverlay.add(eclipseRight, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 420, 270, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(overlay1, javax.swing.GroupLayout.DEFAULT_SIZE, 920, Short.MAX_VALUE)
+            .addComponent(myOverlay, javax.swing.GroupLayout.DEFAULT_SIZE, 920, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(overlay1, javax.swing.GroupLayout.PREFERRED_SIZE, 675, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(myOverlay, javax.swing.GroupLayout.PREFERRED_SIZE, 675, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -391,53 +391,53 @@ public class RegisterForm extends javax.swing.JFrame {
         yMouse = evt.getY();
     }//GEN-LAST:event_barMousePressed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void signUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_signUpButtonActionPerformed
 
-    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
-        jButton1.setBackground(Color.decode("#8899ed"));
-    }//GEN-LAST:event_jButton1MouseEntered
+    private void signUpButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpButtonMouseEntered
+        signUpButton.setBackground(Color.decode("#8899ed"));
+    }//GEN-LAST:event_signUpButtonMouseEntered
 
-    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
-        jButton1.setBackground(Color.decode("#556EE6"));        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1MouseExited
+    private void signUpButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpButtonMouseExited
+        signUpButton.setBackground(Color.decode("#556EE6"));        // TODO add your handling code here:
+    }//GEN-LAST:event_signUpButtonMouseExited
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void nameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_nameFieldActionPerformed
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void passFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_passFieldActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void lastNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastNameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_lastNameFieldActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void schoolFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_schoolFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_schoolFieldActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void emailFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_emailFieldActionPerformed
 
-    private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
+    private void rePassFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rePassFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField2ActionPerformed
+    }//GEN-LAST:event_rePassFieldActionPerformed
 
-    private void passLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passLabel4MouseClicked
+    private void textTerms3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_textTerms3MouseClicked
         openWebpage("http://fitnik.tech/public/docs/terms.pdf");
-    }//GEN-LAST:event_passLabel4MouseClicked
+    }//GEN-LAST:event_textTerms3MouseClicked
 
-    private void passLabel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passLabel4MouseEntered
-        passLabel4.setForeground(Color.decode("#003d52"));
-    }//GEN-LAST:event_passLabel4MouseEntered
+    private void textTerms3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_textTerms3MouseEntered
+        textTerms3.setForeground(Color.decode("#003d52"));
+    }//GEN-LAST:event_textTerms3MouseEntered
 
-    private void passLabel4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passLabel4MouseExited
-        passLabel4.setForeground(Color.decode("#0099cc"));
-    }//GEN-LAST:event_passLabel4MouseExited
+    private void textTerms3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_textTerms3MouseExited
+        textTerms3.setForeground(Color.decode("#0099cc"));
+    }//GEN-LAST:event_textTerms3MouseExited
     public static void openWebpage(String urlString) {
         try {
             Desktop.getDesktop().browse(new URL(urlString).toURI());
@@ -487,36 +487,36 @@ public class RegisterForm extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel appNameLeft;
+    private javax.swing.JLabel appNameRight;
+    private javax.swing.JLabel banner;
     private javax.swing.JPanel bar;
+    private javax.swing.JLabel eclipseLeft;
+    private javax.swing.JLabel eclipseRight;
+    private javax.swing.JTextField emailField;
+    private javax.swing.JLabel emailLabel;
     private javax.swing.JPanel exit;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JLabel firstLabel;
+    private javax.swing.JLabel iconBanner;
+    private javax.swing.JTextField lastNameField;
+    private javax.swing.JLabel lastNameLabel;
+    private javax.swing.JLabel logoLeft;
+    private javax.swing.JLabel logoRight;
     private javax.swing.JPanel min;
     private javax.swing.JLabel minButton;
-    private udc.helper.Overlay overlay1;
+    private udc.helper.Overlay myOverlay;
+    private javax.swing.JTextField nameField;
+    private javax.swing.JPasswordField passField;
     private javax.swing.JLabel passLabel;
-    private javax.swing.JLabel passLabel1;
-    private javax.swing.JLabel passLabel2;
-    private javax.swing.JLabel passLabel3;
-    private javax.swing.JLabel passLabel4;
-    private javax.swing.JLabel userLabel2;
-    private javax.swing.JLabel userLabel3;
-    private javax.swing.JLabel userLabel4;
-    private javax.swing.JLabel userLabel5;
+    private javax.swing.JPasswordField rePassField;
+    private javax.swing.JLabel rePassLabel;
+    private javax.swing.JTextField schoolField;
+    private javax.swing.JLabel schoolLabel;
+    private javax.swing.JButton signUpButton;
+    private javax.swing.JPanel signUpPanel;
+    private javax.swing.JLabel textTerms1;
+    private javax.swing.JLabel textTerms2;
+    private javax.swing.JLabel textTerms3;
     private javax.swing.JLabel xButton;
     // End of variables declaration//GEN-END:variables
 
