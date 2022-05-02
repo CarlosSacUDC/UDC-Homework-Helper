@@ -335,13 +335,17 @@ public class LogIn extends javax.swing.JFrame {
         user = usernameField.getText();
         pass = passField.getText();
         //writeFile(user, pass);
-        if(checkPass(user, pass)){
+        if(checkPass(user, pass)==1){
             Main newWindow = new Main();
             newWindow.setVisible(true);
             newWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             this.dispose();
+        }else if(checkPass(user, pass)==0){
+            System.err.println("Invalid password");
+        }else{
+            System.err.println("Not found");
         }
-        System.err.println(user+"\n"+pass);
+        
     }//GEN-LAST:event_logInButtonActionPerformed
 
     private void passFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passFieldActionPerformed
@@ -375,7 +379,7 @@ public class LogIn extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_logInButtonMouseClicked
     
-    private boolean checkPass(String user, String pass) {
+    private int checkPass(String user, String pass) {
         BufferedReader br = null;
         String line = "";
         try {
@@ -386,18 +390,19 @@ public class LogIn extends javax.swing.JFrame {
                     String[] values = line.split(",");
                     if (values[2].equals(user)){
                         if(values[4].equals(pass)){
-                            return true;
+                            return 1;
                         }
+                        return 0;
                     }
                 }
-                return false;
+                return -1;
             } catch (IOException ex) {
                 Logger.getLogger(LogIn.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (FileNotFoundException ex) {
             Logger.getLogger(LogIn.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return false;
+        return -1;
     }
     /**
      * @param args the command line arguments
