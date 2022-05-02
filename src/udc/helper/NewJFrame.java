@@ -12,6 +12,8 @@ import java.awt.Color;
  */
 public class NewJFrame extends javax.swing.JFrame {
 
+    
+    
     /**
      * Creates new form NewJFrame
      */
