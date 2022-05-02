@@ -11,7 +11,7 @@ import java.awt.RenderingHints;
 
 /**
  *
- * @author carlo
+ * @author carlos
  */
 public class links extends javax.swing.JPanel {
 
@@ -22,19 +22,17 @@ public class links extends javax.swing.JPanel {
         initComponents();
         setOpaque(false);
     }
-    
+
     protected void paintComponent(Graphics grphcs) {
         Graphics2D g2 = (Graphics2D) grphcs;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setPaint(Color.decode("#f0f8ff"));
         g2.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15);
-        
-        g2.fillRect(0, 0, getWidth(), getHeight()-10);
-        
-        
+
+        g2.fillRect(0, 0, getWidth(), getHeight() - 10);
+
         super.paintComponent(grphcs);
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

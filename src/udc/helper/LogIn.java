@@ -9,22 +9,19 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author carlo
+ * @author carlos 
  */
 public class LogIn extends javax.swing.JFrame {
 
-    
-    
-    
-    
     /**
      * Creates new form NewJFrame
      */
     int xMouse;
     int yMouse;
+
     public LogIn() {
         initComponents();
-        setBackground(new Color (0,0,0,0));
+        setBackground(new Color(0, 0, 0, 0));
     }
 
     /**
@@ -310,7 +307,7 @@ public class LogIn extends javax.swing.JFrame {
         int y;
         x = evt.getXOnScreen();
         y = evt.getYOnScreen();
-        this.setLocation(x-xMouse, y-yMouse);
+        this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_barMouseDragged
 
     private void barMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barMousePressed
@@ -343,7 +340,7 @@ public class LogIn extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseEntered
 
     private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
-    jButton1.setBackground(Color.decode("#556EE6"));        // TODO add your handling code here:
+        jButton1.setBackground(Color.decode("#556EE6"));        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1MouseExited
 
     private void regiButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_regiButtonMouseClicked

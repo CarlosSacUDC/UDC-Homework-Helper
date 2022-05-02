@@ -1,4 +1,3 @@
-
 package udc.helper;
 
 import java.awt.Color;
@@ -11,7 +10,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 
-public class newButtons extends JButton{
+public class newButtons extends JButton {
 
     /**
      * @return the over
@@ -83,64 +82,63 @@ public class newButtons extends JButton{
         this.radious = radious;
     }
 
-       public newButtons(){
-           color = Color.white;
-           colorover = new Color(174,198,207);
-           colorClick = new Color(195, 207, 174);
-           borderColor = new Color(97,168,255);
-           
-           setContentAreaFilled(false);
-           
-           addMouseListener(new MouseAdapter() {
+    public newButtons() {
+        color = Color.white;
+        colorover = new Color(174, 198, 207);
+        colorClick = new Color(195, 207, 174);
+        borderColor = new Color(97, 168, 255);
 
-               @Override
-               public void mouseEntered(MouseEvent e) {
-                   setBackground(colorover);
-                   over = true;
-               }
+        setContentAreaFilled(false);
 
-               @Override
-               public void mouseExited(MouseEvent e) {
-                   setBackground(color);
-                   over = false;
-               }
+        addMouseListener(new MouseAdapter() {
 
-               @Override
-               public void mousePressed(MouseEvent e) {
-                   setBackground(colorClick);
-               }
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                setBackground(colorover);
+                over = true;
+            }
 
-               @Override
-               public void mouseReleased(MouseEvent e) {
-                   if (over) {
-                       setBackground(colorover);
-                   }else{
-                       setBackground(color);
-                   }
-               }
-               
-           
-           });
-       }
-       
-       private boolean over;
-       private Color color;
-       private Color colorover;
-       private Color colorClick;
-       private Color borderColor;
-       private int radious = 15;
-       
-           @Override
+            @Override
+            public void mouseExited(MouseEvent e) {
+                setBackground(color);
+                over = false;
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                setBackground(colorClick);
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                if (over) {
+                    setBackground(colorover);
+                } else {
+                    setBackground(color);
+                }
+            }
+
+        });
+    }
+
+    private boolean over;
+    private Color color;
+    private Color colorover;
+    private Color colorClick;
+    private Color borderColor;
+    private int radious = 15;
+
+    @Override
     protected void paintComponent(Graphics grphcs) {
         Graphics2D g2 = (Graphics2D) grphcs;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-       
+
         g2.setColor(borderColor);
         g2.fillRoundRect(0, 0, getWidth(), getHeight(), radious, radious);
-        
+
         g2.fillRect(getWidth(), 0, getWidth(), getHeight());
         g2.setColor(getBackground());
-        g2.fillRoundRect(2, 2, getWidth()-4, getHeight()-4, radious, radious);
+        g2.fillRoundRect(2, 2, getWidth() - 4, getHeight() - 4, radious, radious);
         super.paintChildren(grphcs);
     }
 
@@ -157,5 +155,5 @@ public class newButtons extends JButton{
     public void setColorClick(Color colorClick) {
         this.colorClick = colorClick;
     }
-       
+
 }

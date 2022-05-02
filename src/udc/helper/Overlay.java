@@ -1,19 +1,15 @@
-
 package udc.helper;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
-
 public class Overlay extends javax.swing.JPanel {
-
 
     public Overlay() {
         initComponents();
         setOpaque(false);
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

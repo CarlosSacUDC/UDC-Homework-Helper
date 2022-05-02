@@ -1,4 +1,3 @@
-
 package udc.helper;
 
 import java.awt.CardLayout;
@@ -13,10 +12,10 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author carlo
+ * @author carlos
  */
 public class Main extends javax.swing.JFrame {
-    
+
     int xMouse;
     int yMouse;
 
@@ -24,8 +23,7 @@ public class Main extends javax.swing.JFrame {
      * Creates new form Main
      */
     public Main() {
-        
-        
+
         initComponents();
         String path = "src/udc/helper/icons/link.png";
         loadIcon(linkLabel, path);
@@ -35,26 +33,27 @@ public class Main extends javax.swing.JFrame {
         loadIcon(assignLabel, path2);
         myClasses.setVisible(false);
         myAssign.setVisible(false);
-        
-        setBackground(new Color (0,0,0,0));
+
+        setBackground(new Color(0, 0, 0, 0));
 
     }
-    
+
     private void loadIcon(JLabel label, String path) {
         ImageIcon icon = new ImageIcon(path);
         icon = resize(icon, 30);
         label.setIcon(icon);
     }
-    private ImageIcon resize(ImageIcon image,int size) {
-	Image test = image.getImage();
-	
-	Image rescaled = test.getScaledInstance(size, size, Image.SCALE_SMOOTH);
-	
-	image =  new ImageIcon(rescaled);
-	
-	return image;
+
+    private ImageIcon resize(ImageIcon image, int size) {
+        Image test = image.getImage();
+
+        Image rescaled = test.getScaledInstance(size, size, Image.SCALE_SMOOTH);
+
+        image = new ImageIcon(rescaled);
+
+        return image;
     }
- 
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -512,7 +511,7 @@ public class Main extends javax.swing.JFrame {
         int y;
         x = evt.getXOnScreen();
         y = evt.getYOnScreen();
-        this.setLocation(x-xMouse, y-yMouse);
+        this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_barMouseDragged
 
     private void xButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xButtonMouseEntered
@@ -555,14 +554,12 @@ public class Main extends javax.swing.JFrame {
         setPanelEnabled(myClasses, false);
         setPanelEnabled(myAssign, false);
         setPanelEnabled(quickLinks, true);
-    
-    
-    myClasses.setVisible(false);
-    myAssign.setVisible(false);
-    quickLinks.setVisible(true);
-    
 
-        
+        myClasses.setVisible(false);
+        myAssign.setVisible(false);
+        quickLinks.setVisible(true);
+
+
     }//GEN-LAST:event_linkLabelMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -587,15 +584,15 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_classesLabelMouseClicked
 
     private void classesLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_classesLabelMouseEntered
-    classesLabel.setForeground(Color.black);
+        classesLabel.setForeground(Color.black);
         String path = "src/udc/helper/icons/presentation_hover.png";
         loadIcon(classesLabel, path);
     }//GEN-LAST:event_classesLabelMouseEntered
 
     private void classesLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_classesLabelMouseExited
-classesLabel.setForeground(Color.white);
+        classesLabel.setForeground(Color.white);
         String path = "src/udc/helper/icons/presentation.png";
-        loadIcon(classesLabel, path);        
+        loadIcon(classesLabel, path);
     }//GEN-LAST:event_classesLabelMouseExited
 
     private void assignLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_assignLabelMouseClicked
@@ -608,9 +605,9 @@ classesLabel.setForeground(Color.white);
     }//GEN-LAST:event_assignLabelMouseClicked
 
     private void assignLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_assignLabelMouseEntered
-assignLabel.setForeground(Color.black);
+        assignLabel.setForeground(Color.black);
         String path = "src/udc/helper/icons/assignment_hover.png";
-        loadIcon(assignLabel, path);        
+        loadIcon(assignLabel, path);
     }//GEN-LAST:event_assignLabelMouseEntered
 
     private void assignLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_assignLabelMouseExited
@@ -662,34 +659,28 @@ assignLabel.setForeground(Color.black);
             }
         });
     }
+
     void setPanelEnabled(JPanel panel, Boolean isEnabled) {
-    panel.setEnabled(isEnabled);
+        panel.setEnabled(isEnabled);
 
-    Component[] components = panel.getComponents();
+        Component[] components = panel.getComponents();
 
-    for (Component component : components) {
-        if (component instanceof JPanel) {
-            setPanelEnabled((JPanel) component, isEnabled);
+        for (Component component : components) {
+            if (component instanceof JPanel) {
+                setPanelEnabled((JPanel) component, isEnabled);
+            }
+            component.setEnabled(isEnabled);
         }
-        component.setEnabled(isEnabled);
     }
-}
-    
-    
-    
-    
+
     public static void openWebpage(String urlString) {
-    try {
-        Desktop.getDesktop().browse(new URL(urlString).toURI());
-    } catch (Exception e) {
-        e.printStackTrace();
+        try {
+            Desktop.getDesktop().browse(new URL(urlString).toURI());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
-    
-    
-    
-    
-    
-}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel assignLabel;
@@ -729,6 +720,5 @@ assignLabel.setForeground(Color.black);
     private udc.helper.sideMenu sideMenu;
     private javax.swing.JLabel xButton;
     // End of variables declaration//GEN-END:variables
-
 
 }

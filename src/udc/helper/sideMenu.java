@@ -12,7 +12,7 @@ import java.awt.RenderingHints;
 
 /**
  *
- * @author carlo
+ * @author carlos
  */
 public class sideMenu extends javax.swing.JPanel {
 
@@ -28,17 +28,13 @@ public class sideMenu extends javax.swing.JPanel {
     protected void paintChildren(Graphics grphcs) {
         Graphics2D g2 = (Graphics2D) grphcs;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        GradientPaint g = new GradientPaint(0,0, Color.decode("#86A8E7"), 0, getHeight(), Color.decode("#91EAE4"));
+        GradientPaint g = new GradientPaint(0, 0, Color.decode("#86A8E7"), 0, getHeight(), Color.decode("#91EAE4"));
         g2.setPaint(g);
         g2.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15);
-        g2.fillRect(getWidth()-10, 0, getWidth(), getHeight());
+        g2.fillRect(getWidth() - 10, 0, getWidth(), getHeight());
         super.paintChildren(grphcs);
     }
 
-    
- 
-    
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
