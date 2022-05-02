@@ -5,6 +5,13 @@
 package udc.helper;
 
 import java.awt.Color;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 
 /**
@@ -212,7 +219,7 @@ public class LogIn extends javax.swing.JFrame {
 
         userLabel.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         userLabel.setForeground(new java.awt.Color(73, 80, 87));
-        userLabel.setText("Username");
+        userLabel.setText("Email");
         signInPanel.add(userLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 100, 50));
 
         regiButton.setForeground(new java.awt.Color(0, 153, 204));
@@ -235,6 +242,9 @@ public class LogIn extends javax.swing.JFrame {
         logInButton.setForeground(new java.awt.Color(255, 255, 255));
         logInButton.setText("Log In");
         logInButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logInButtonMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 logInButtonMouseEntered(evt);
             }
@@ -320,7 +330,18 @@ public class LogIn extends javax.swing.JFrame {
     }//GEN-LAST:event_usernameFieldActionPerformed
 
     private void logInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logInButtonActionPerformed
-        // TODO add your handling code here:
+        String user = "";
+        String pass = "";
+        user = usernameField.getText();
+        pass = passField.getText();
+        //writeFile(user, pass);
+        if(checkPass(user, pass)){
+            Main newWindow = new Main();
+            newWindow.setVisible(true);
+            newWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            this.dispose();
+        }
+        System.err.println(user+"\n"+pass);
     }//GEN-LAST:event_logInButtonActionPerformed
 
     private void passFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passFieldActionPerformed
@@ -350,6 +371,34 @@ public class LogIn extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_regiButtonMouseClicked
 
+    private void logInButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logInButtonMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_logInButtonMouseClicked
+    
+    private boolean checkPass(String user, String pass) {
+        BufferedReader br = null;
+        String line = "";
+        try {
+            br = new BufferedReader(new FileReader("user/user.csv"));
+            
+            try {
+                while((line = br.readLine()) != null){
+                    String[] values = line.split(",");
+                    if (values[2].equals(user)){
+                        if(values[4].equals(pass)){
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            } catch (IOException ex) {
+                Logger.getLogger(LogIn.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(LogIn.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
     /**
      * @param args the command line arguments
      */
@@ -409,4 +458,6 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JTextField usernameField;
     private javax.swing.JLabel xButton;
     // End of variables declaration//GEN-END:variables
+
+    
 }

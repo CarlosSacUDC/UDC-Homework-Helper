@@ -6,7 +6,9 @@ package udc.helper;
 
 import java.awt.Color;
 import java.awt.Desktop;
+import java.io.FileWriter;
 import java.net.URL;
+import javax.swing.JFrame;
 
 /**
  *
@@ -392,7 +394,25 @@ public class RegisterForm extends javax.swing.JFrame {
     }//GEN-LAST:event_barMousePressed
 
     private void signUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpButtonActionPerformed
-        // TODO add your handling code here:
+        String user = "";
+        String last = "";
+        String email = "";
+        String school = "";
+        String pass = "";
+        String repass = "";
+        user = nameField.getText();
+        last = lastNameField.getText();
+        email = emailField.getText();
+        school = schoolField.getText();
+        pass = passField.getText();
+        repass = rePassField.getText();
+        writeFile(user, last, email, school, pass);
+        System.err.println(user + "\n" + pass);
+        
+        LogIn newLog = new LogIn();
+        newLog.setVisible(true);
+        newLog.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
     }//GEN-LAST:event_signUpButtonActionPerformed
 
     private void signUpButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpButtonMouseEntered
@@ -447,6 +467,33 @@ public class RegisterForm extends javax.swing.JFrame {
 
     }
 
+    private void writeFile(String user, String last, String email, String school, String pass) {
+        FileWriter newFile = null;
+        try {
+            newFile = new FileWriter("user/user.csv");
+            newFile.append(user);
+            newFile.append(",");
+            newFile.append(last);
+            newFile.append(",");
+            newFile.append(email);
+            newFile.append(",");
+            newFile.append(school);
+            newFile.append(",");
+            newFile.append(pass);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                newFile.flush();
+                newFile.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -484,7 +531,6 @@ public class RegisterForm extends javax.swing.JFrame {
 //            }
 //        });
 //    }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel appNameLeft;
