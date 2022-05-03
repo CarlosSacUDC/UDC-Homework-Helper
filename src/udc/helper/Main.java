@@ -74,6 +74,13 @@ public class Main extends javax.swing.JFrame {
         udcButton = new javax.swing.JButton();
         bbButton = new javax.swing.JButton();
         qlButton = new javax.swing.JButton();
+        myAssign = new udc.helper.links();
+        seeActivityLabel = new javax.swing.JLabel();
+        pasteField = new javax.swing.JTextField();
+        pasteLabel = new javax.swing.JLabel();
+        subActivity = new javax.swing.JButton();
+        assignmentTable = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
         myClasses = new udc.helper.links();
         classLabel = new javax.swing.JLabel();
         descLabel = new javax.swing.JLabel();
@@ -88,13 +95,6 @@ public class Main extends javax.swing.JFrame {
         location = new javax.swing.JTextField();
         desc = new javax.swing.JTextField();
         submitButton = new javax.swing.JButton();
-        myAssign = new udc.helper.links();
-        seeActivityLabel = new javax.swing.JLabel();
-        pasteField = new javax.swing.JTextField();
-        pasteLabel = new javax.swing.JLabel();
-        subActivity = new javax.swing.JButton();
-        assignmentTable = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -319,6 +319,73 @@ public class Main extends javax.swing.JFrame {
 
         overlay.add(quickLinks, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 660, 500));
 
+        seeActivityLabel.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        seeActivityLabel.setText("Please paste your Activity Stream here: ");
+
+        pasteField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pasteFieldActionPerformed(evt);
+            }
+        });
+
+        pasteLabel.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        pasteLabel.setText("Please paste your Activity Stream here: ");
+
+        subActivity.setText("Submit");
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Assignment", "Class", "Due date", "Time"
+            }
+        ));
+        assignmentTable.setViewportView(jTable2);
+
+        javax.swing.GroupLayout myAssignLayout = new javax.swing.GroupLayout(myAssign);
+        myAssign.setLayout(myAssignLayout);
+        myAssignLayout.setHorizontalGroup(
+            myAssignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(myAssignLayout.createSequentialGroup()
+                .addGroup(myAssignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(myAssignLayout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(assignmentTable, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(myAssignLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(myAssignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pasteLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(seeActivityLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(23, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, myAssignLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(myAssignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(subActivity)
+                    .addComponent(pasteField, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(78, 78, 78))
+        );
+        myAssignLayout.setVerticalGroup(
+            myAssignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, myAssignLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(pasteLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pasteField, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(subActivity)
+                .addGap(3, 3, 3)
+                .addComponent(seeActivityLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addComponent(assignmentTable, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15))
+        );
+
+        overlay.add(myAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 660, 500));
+
         classLabel.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         classLabel.setText("Class Name");
 
@@ -424,73 +491,6 @@ public class Main extends javax.swing.JFrame {
         );
 
         overlay.add(myClasses, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 660, 500));
-
-        seeActivityLabel.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        seeActivityLabel.setText("Please paste your Activity Stream here: ");
-
-        pasteField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pasteFieldActionPerformed(evt);
-            }
-        });
-
-        pasteLabel.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        pasteLabel.setText("Please paste your Activity Stream here: ");
-
-        subActivity.setText("Submit");
-
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        assignmentTable.setViewportView(jTable2);
-
-        javax.swing.GroupLayout myAssignLayout = new javax.swing.GroupLayout(myAssign);
-        myAssign.setLayout(myAssignLayout);
-        myAssignLayout.setHorizontalGroup(
-            myAssignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(myAssignLayout.createSequentialGroup()
-                .addGroup(myAssignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(myAssignLayout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(assignmentTable, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(myAssignLayout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addGroup(myAssignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pasteLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(seeActivityLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(23, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, myAssignLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(myAssignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(subActivity)
-                    .addComponent(pasteField, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(78, 78, 78))
-        );
-        myAssignLayout.setVerticalGroup(
-            myAssignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, myAssignLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(pasteLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pasteField, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(subActivity)
-                .addGap(3, 3, 3)
-                .addComponent(seeActivityLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addComponent(assignmentTable, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
-        );
-
-        overlay.add(myAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 660, 500));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
